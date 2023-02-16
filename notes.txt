@@ -1,5 +1,5 @@
-1. Open file, read file, make it into a list of words. Words in the file 
-are seperated by new lines. parameter slice() will be useful?
+1. ✅ Open file, read file, make it into a list of words. Words in the file 
+are seperated by new lines. parameter split() will be useful?
 
 2. Select a random word.
 
