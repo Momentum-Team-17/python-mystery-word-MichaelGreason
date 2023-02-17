@@ -22,3 +22,7 @@ are seperated by new lines. parameter split() will be useful?
     reveal the word.
 
 6. Ask them if they want to play again. If so, go back to step 2
+
+
+
+REMEMBER .join
