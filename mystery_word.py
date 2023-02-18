@@ -17,18 +17,28 @@ def open_file_start_game(file):
 def play_game():
     word, underscores = open_file_start_game('words.txt')
     print(word, underscores)
-    answer = []
     wrong_guesses = []
-    user_guess = input("Guess a letter! ")
-    print('user_guess: ', user_guess)
-    if user_guess in word:
-        for i in range(len(word)):
-            if user_guess == word[i]:
-                underscores[i] = user_guess
-    else:
-        wrong_guesses.append(user_guess)
-    print('Answer: ', underscores)
-    print('wrong guesses: ', wrong_guesses)
+    guesses = 8
+    while guesses > 0:
+        user_guess = input("Guess a letter! ")
+        print('user_guess: ', user_guess)
+        if user_guess in word:
+            guesses -= 1
+            for i in range(len(word)):
+                if user_guess == word[i]:
+                    underscores[i] = user_guess
+        else:
+            wrong_guesses.append(user_guess)
+            guesses -= 1
+        print('Answer: ', underscores)
+        print('wrong guesses: ', wrong_guesses)
+        print('Guesses remaing: ', guesses)
+        if underscores == word:
+            print('YOU WON')
+            break
+        if guesses == 0:
+            print('OUT OF GUESSES')
+            break
 
 
 # game_board = ''
