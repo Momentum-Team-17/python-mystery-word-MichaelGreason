@@ -53,7 +53,7 @@ def play_game():
             print('OUT OF GUESSES! The correct answer was ', ' '.join(word))
             break
     play_again = input('Do you want to play again Y/N? ')
-    if play_again == 'Y':
+    if play_again == 'Y' or 'y':
         play_game()
     else:
         print('Okay BYEEEE')
