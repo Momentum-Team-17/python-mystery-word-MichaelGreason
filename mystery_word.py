@@ -23,14 +23,14 @@ def play_game():
     while guesses > 0:
         user_guess = input("Guess a letter! ")
         print('user_guess: ', user_guess)
-        if user_guess in word:
+        if user_guess in wrong_guesses:
+            print('Already guessed that! Try again!')
+            guesses += 0
+        elif user_guess in word:
             guesses -= 1
             for i in range(len(word)):
                 if user_guess == word[i]:
                     underscores[i] = user_guess
-                    if user_guess == underscores[i]:
-                        print('Already guessed that! Try again!')
-                        guesses += 1
         else:
             wrong_guesses.append(user_guess)
             guesses -= 1
@@ -46,6 +46,8 @@ def play_game():
     play_again = input('Do you want to play again Y/N? ')
     if play_again == 'Y':
         play_game()
+    else:
+        print('Okay BYEEEE')
 
 
 # game_board = ''
