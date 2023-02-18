@@ -21,7 +21,7 @@ are seperated by new lines. parameter split() will be useful?
     - ✅ if user guesses the word, tell them they are correct and 
     reveal the word.
 
-6. Ask them if they want to play again. If so, go back to step 2
+6. ✅ Ask them if they want to play again. If so, go back to step 2
 
 
 

@@ -19,7 +19,16 @@ def play_game():
     # print(word, underscores)
     print(' '.join(underscores))
     wrong_guesses = []
-    guesses = 8
+    difficulty = input(
+        'What kind of challenge do you prefer? Type hard, Medium or Easy: ')
+    if difficulty == 'Hard':
+        guesses = 8
+    elif difficulty == 'Medium':
+        guesses = 10
+    elif difficulty == 'Easy':
+        guesses = 15
+    else:
+        print('Invalid Entry')
     while guesses > 0:
         user_guess = input("Guess a letter! ")
         print('user_guess: ', user_guess)
