@@ -43,6 +43,9 @@ def play_game():
         if guesses == 0:
             print('OUT OF GUESSES! The correct answer was ', ' '.join(word))
             break
+    play_again = input('Do you want to play again Y/N? ')
+    if play_again == 'Y':
+        play_game()
 
 
 # game_board = ''

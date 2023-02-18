@@ -12,7 +12,7 @@ are seperated by new lines. parameter split() will be useful?
     - keep track of the correct letter guesses
         ✅ - if a guess is correct, display it like this 
             B _ _ B A _ D
-        - if the letter has already been guessed, tell the user and 
+        - ✅ if the letter has already been guessed, tell the user and 
         dont take away a guess
 
 5. Repeat step 4 until user reaches 8 guess or all the right letters
