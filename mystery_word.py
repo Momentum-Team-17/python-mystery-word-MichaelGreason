@@ -28,6 +28,9 @@ def play_game():
             for i in range(len(word)):
                 if user_guess == word[i]:
                     underscores[i] = user_guess
+                    if user_guess == underscores[i]:
+                        print('Already guessed that! Try again!')
+                        guesses += 1
         else:
             wrong_guesses.append(user_guess)
             guesses -= 1
