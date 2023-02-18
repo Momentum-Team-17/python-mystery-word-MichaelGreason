@@ -21,10 +21,13 @@ def play_game():
         'What kind of challenge do you prefer? Type Hard, Medium or Easy: ')
     if difficulty == 'Hard':
         guesses = 8
+        len(word) >= 8
     elif difficulty == 'Medium':
-        guesses = 10
+        guesses = 8
+        len(word) >= 6 and len(word) < 8
     elif difficulty == 'Easy':
-        guesses = 15
+        guesses = 8
+        len(word) < 6
     else:
         print('Invalid Entry')
     while guesses > 0:
