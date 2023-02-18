@@ -16,7 +16,8 @@ def open_file_start_game(file):
 
 def play_game():
     word, underscores = open_file_start_game('words.txt')
-    print(word, underscores)
+    # print(word, underscores)
+    print(' '.join(underscores))
     wrong_guesses = []
     guesses = 8
     while guesses > 0:
@@ -30,14 +31,14 @@ def play_game():
         else:
             wrong_guesses.append(user_guess)
             guesses -= 1
-        print('Answer: ', underscores)
+        print('Answer: ', ' '.join(underscores))
         print('wrong guesses: ', wrong_guesses)
         print('Guesses remaing: ', guesses)
         if underscores == word:
-            print('YOU WON')
+            print('YOU WON! The answer is: ', ' '.join(word))
             break
         if guesses == 0:
-            print('OUT OF GUESSES')
+            print('OUT OF GUESSES! The correct answer was ', ' '.join(word))
             break
 
 
